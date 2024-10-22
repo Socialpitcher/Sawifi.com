@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --mainColor:#34929C;
+  --secondColor:#B3F0F6;
+  --primaryWhite:#fff;
+  --lightWhite:#f1f1f1;
+  --primaryBlack:#000;
+  --lightBlack:#1F1F1F;
+  --discountColor:#54CB3C;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Josefin-Sans;
+}
+
+body{
+  background-color:var(--lightWhite);
+}
+
+@font-face {
+  font-family: 'Josefin-Sans';
+  src: local('Josefin Sans Regular'), local('JosefinSans-Regular'),
+      url('../fonts/JosefinSans-Regular.woff2') format('woff2');
+  font-weight: regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Josefin-Sans';
+  src: local('Josefin Sans Medium'), local('JosefinSans-Medium'),
+      url('../fonts/JosefinSans-Medium.woff2') format('woff2');
+  font-weight: medium;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Josefin-Sans';
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'),
+      url('../fonts/JosefinSans-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+button.swal2-confirm.swal2-styled{
+  @apply bg-[var(--mainColor)] py-2 px-8 rounded-[10px];
+}
+
+
+.swal2-popup.swal2-modal.swal2-icon-error.swal2-show{
+  @apply rounded-[20px];
+}
+
