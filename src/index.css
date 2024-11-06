@@ -19,6 +19,12 @@
   font-family:Josefin-Sans;
 }
 
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
+
+
 body{
   background-color:var(--lightWhite);
 }

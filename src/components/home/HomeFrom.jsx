@@ -5,8 +5,8 @@ import Swal from 'sweetalert2';
 
 const HomeForm = () => {
     const [data, setdata] = useContext(cardData);
-    const [clientBill, setClientBill] = useState("70");
-    const [mobilityBill, setMobilityBill] = useState("37");
+    const [clientBill, setClientBill] = useState("");
+    const [mobilityBill, setMobilityBill] = useState("");
     const [homeProvider, setHomeProvider] = useState('');
     const [mobilityProvider, setMobilityProvider] = useState('');
     const [Cdata, setCdata] = useState(null)
@@ -49,7 +49,7 @@ const HomeForm = () => {
 
             if (filterCards.length > 0) {
                 setTimeout(() => {
-                    document.getElementById('service-cards').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    document.getElementById('service-cards').scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }, 100);
             }
         });
@@ -97,7 +97,7 @@ const HomeForm = () => {
                         <div className='w-full md:w-[19%]'>
                             <label className='block mb-2 text-sm lg:text-[1.042vw] font-normal text-[var(--lightBlack)]'>Current Home Provider</label>
                             <select
-                                className='w-full bg-[var(--lightWhite)] h-12 rounded-[10px] px-2 py-2 text-[16px] font-normal outline-[var(--mainColor)]'
+                                className='cursor-pointer w-full bg-[var(--lightWhite)] h-12 rounded-[10px] px-2 py-2 text-[16px] font-normal outline-[var(--mainColor)]'
                                 value={homeProvider}
                                 onChange={e => setHomeProvider(e.target.value)}
                             >
@@ -110,7 +110,7 @@ const HomeForm = () => {
                         <div className='w-full mt-5 md:mt-0 md:w-[19%]'>
                             <label className='block mb-2 text-sm lg:text-[1.042vw] font-normal text-[var(--lightBlack)]'>Home Service Options</label>
                             <select
-                                className='w-full bg-[var(--lightWhite)] h-12 rounded-[10px] px-2 py-2 text-[16px] font-normal outline-[var(--mainColor)]'
+                                className='cursor-pointer w-full bg-[var(--lightWhite)] h-12 rounded-[10px] px-2 py-2 text-[16px] font-normal outline-[var(--mainColor)]'
                             >
                                 <option value="">Home Service Options</option>
                                 {["Internet", "Internet+HomePhone", "Internet+TV", "Internet+Homephone+TV"].map(option => (
@@ -134,7 +134,7 @@ const HomeForm = () => {
                         <div className='w-full mt-5 md:mt-0 md:w-[19%]'>
                             <label className='block mb-2 text-sm lg:text-[1.042vw] font-normal text-[var(--lightBlack)]'>Mobility Provider</label>
                             <select
-                                className='w-full bg-[var(--lightWhite)] h-12 rounded-[10px] px-2 py-2 text-[16px] font-normal outline-[var(--mainColor)]'
+                                className='cursor-pointer w-full bg-[var(--lightWhite)] h-12 rounded-[10px] px-2 py-2 text-[16px] font-normal outline-[var(--mainColor)]'
                                 value={mobilityProvider}
                                 onChange={e => setMobilityProvider(e.target.value)}
                             >
